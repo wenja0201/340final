@@ -126,7 +126,7 @@ const LeadMagnet: React.FC = () => {
             onMouseEnter={(e) => { e.currentTarget.style.opacity = '0.85'; }}
             onMouseLeave={(e) => { e.currentTarget.style.opacity = '1'; }}
           >
-            DOWNLOAD →
+            GET IT FOR FREE →
           </button>
         </form>
       </div>
@@ -313,7 +313,7 @@ const About: React.FC = () => {
             <span style={{ fontFamily: "'Kelson Sans BG', sans-serif" }}>DATE</span>
           </>,
         ]}
-        tagline="This agency is hot, fr."
+        tagline="Consider yourself updated."
         image={up2dateImg}
         noOverlay
       />

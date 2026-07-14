@@ -6,7 +6,7 @@ import { testimonials, testimonialsCta } from '@/content';
 const Testimonials: React.FC = () => {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(1);
-  const items = testimonials.slice(0, 4); // max 4 testimonials
+  const items = testimonials.slice(0, 5); // all 5 testimonials
 
   const go = (next: number) => {
     setDirection(next > current ? 1 : -1);

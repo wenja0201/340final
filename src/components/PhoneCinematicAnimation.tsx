@@ -50,7 +50,7 @@ const MiniPhone: React.FC<{ index: number }> = ({ index }) => {
     // 2 – Mission (red)
     <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '6px', background: '#A22131' }}>
       <p style={{ fontFamily: 'Montserrat, serif', fontWeight: 700, color: '#fff', fontSize: '16px', lineHeight: 1.2 }}>our<br />mission</p>
-      <p style={{ color: 'rgba(255,255,255,0.58)', fontSize: '6px', marginTop: '5px', lineHeight: 1.6 }}>We help brands grow through smart strategies and data-driven decisions.</p>
+      <p style={{ color: 'rgba(255,255,255,0.58)', fontSize: '6px', marginTop: '5px', lineHeight: 1.6 }}>We help brands grow through strategies, data driven decisions, creative ideas, and focus on results that matter.</p>
     </div>,
     // 3 – Strategy visual
     <div style={{ position: 'absolute', inset: 0 }}>
@@ -63,11 +63,10 @@ const MiniPhone: React.FC<{ index: number }> = ({ index }) => {
     <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', padding: '6px 5px', background: '#F6F2EC' }}>
       <p style={{ fontWeight: 700, color: '#3D1515', fontSize: '7px', marginBottom: '5px', letterSpacing: '0.04em', lineHeight: 1.4 }}>Performance<br />Overview</p>
       <div style={{ display: 'flex', flexDirection: 'column', gap: '3px', flex: 1 }}>
-        {[['Impressions', '124K', '+4.7%'], ['Engagement', '8.7%', '+1.2%'], ['Visits', '3.1K', '+9.3%']].map(([l, v, g]) => (
+        {[['Engagement rate', '5%'], ['Impressions', '+53%'], ['Clicks', '4x'], ['Reach', '+103%'], ['Views', '+84.5%'], ['Profile visits', '+78.2%']].map(([l, v]) => (
           <div key={l} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
             <span style={{ fontSize: '5px', color: '#888' }}>{l}</span>
-            <span style={{ fontSize: '7px', fontWeight: 700, color: '#3D1515' }}>{v}</span>
-            <span style={{ fontSize: '6px', color: '#4A9A6A', fontWeight: 600 }}>{g}</span>
+            <span style={{ fontSize: '6px', fontWeight: 700, color: '#4A9A6A' }}>{v}</span>
           </div>
         ))}
       </div>

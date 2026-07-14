@@ -50,5 +50,5 @@ export const footer: FooterContent = {
   backToTopLabel: 'BACK TO TOP',
   copyright: '© 2026 340 CONSULTANCY V.O.F. · KvK 96558075',
   privacy: { label: 'Privacy & Imprint', to: '/privacy' },
-  tagline: 'Social media, but make it strategic.',
+  tagline: 'Be the brand people remember.',
 };

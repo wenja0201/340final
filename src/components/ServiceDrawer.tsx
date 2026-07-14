@@ -24,6 +24,8 @@ export interface ServiceDrawerData {
   body: string;
   facts: { label: string; value: string }[];
   includes?: string[];
+  includesNote?: string;
+  ctaLabel?: string;
   packages?: PackageTier[];
 }
 

@@ -12,7 +12,7 @@ export interface CtaContent {
 }
 
 export const cta: CtaContent = {
-  eyebrow: 'NÄCHSTER SCHRITT',
+  eyebrow: 'NEXT STEP',
   headline: { line1: 'Ready to', line2: 'level up?' },
   yesLabel: 'YES',
   goLabel: "LET'S GO →",

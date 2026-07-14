@@ -24,7 +24,7 @@ import { SplitTransition } from '@/components/ui/animated-scroll';
 import ScrollAdventure from '@/components/ScrollAdventure';
 
 const serviceCards = [
-  { number: '01', title: 'SOCIAL MEDIA\nSTRATEGY', subtitle: 'Smart strategies and clear insights to help your business grow, reach the right audience and stand out.', originalName: 'From €650', href: '/services#services-bento', img: sea1 },
+  { number: '01', title: 'SOCIAL MEDIA\nSTRATEGY', subtitle: 'Smart strategies and clear insights to help your business grow, reach the right audience and stand out.', originalName: 'From €750', href: '/services#services-bento', img: sea1 },
   { number: '02', title: 'SOCIAL MEDIA\nMANAGEMENT', subtitle: 'Keeping your channels active, engaged and connecting with your audience.', originalName: 'From €800', href: '/services#services-bento', img: sea2 },
   { number: '03', title: '1:1\nCOACHING', subtitle: 'We know social media inside out. Let us help you.', originalName: 'Custom proposal', href: '/services#services-bento', img: sea3 },
   { number: '04', title: 'CONTENT &\nCOPYWRITING', subtitle: 'Words and visuals that tell your story, spark attention and drive action.', originalName: 'Custom proposal', href: '/services#services-bento', img: sea4 },
@@ -131,7 +131,7 @@ const Home: React.FC = () => {
               marginBottom: '0.75rem',
             }}
           >
-            Social media, but make it strategic.
+            Be the brand people remember.
           </motion.p>
 
           {/* Headline — same style as PageHero */}
@@ -149,10 +149,10 @@ const Home: React.FC = () => {
               margin: 0,
             }}
           >
-            <span style={{ display: 'block', color: 'hsl(36 21% 95%)' }}>EVERYONE WANTS</span>
+            <span style={{ display: 'block', color: 'hsl(36 21% 95%)' }}>SOCIAL MEDIA THAT</span>
             <span style={{ display: 'block' }}>
-              <span style={{ color: 'hsl(36 21% 95%)' }}>MORE </span>
-              <span style={{ color: 'transparent', WebkitTextStroke: '1.5px hsl(354 100% 87%)' }}>REACH</span>
+              <span style={{ color: 'hsl(36 21% 95%)' }}>ACTUALLY </span>
+              <span style={{ color: 'transparent', WebkitTextStroke: '1.5px hsl(354 100% 87%)' }}>WORKS</span>
             </span>
           </motion.h1>
 
@@ -269,13 +269,13 @@ const Home: React.FC = () => {
               className="mb-6"
             />
             <p className="text-sm md:text-base text-background/70 leading-[1.8] mb-4">
-              Since day one we've turned scattered social presence into clear-eyed strategy that actually moves the numbers. We're the boutique consultancy for brands tired of guessing — and tired of agencies that burn through budget on vanity posts.
+              Since day one we've helped brands stop guessing and start growing. We're the boutique agency for founders and businesses who don't have the time to figure out every platform, the knowledge to know what actually works, or the energy to do it all alone.
             </p>
             <p className="text-sm md:text-base text-background/70 leading-[1.8] mb-4">
-              So let's talk — without you having to ask for a discount 🤝
+              Ready to stop guessing? Let's talk.
             </p>
             <p className="font-serif-elegant italic text-base md:text-lg text-background">
-              Because 340 doesn't cost. It compounds.
+              Your go-to agency for all things social, strategy and content.
             </p>
           </div>
         }
@@ -300,10 +300,10 @@ const Home: React.FC = () => {
                 />
                 <div className="space-y-px w-full" style={{ background: 'hsl(var(--background) / 0.08)' }}>
                   {[
-                    { num: '01', name: 'STRATEGY', price: 'From €650', tag: 'One-off', href: '/services#services-bento' },
+                    { num: '01', name: 'STRATEGY', price: 'From €750', tag: 'One-off', href: '/services#services-bento' },
                     { num: '02', name: 'MANAGEMENT', price: 'From €800', tag: 'Min. 3 months', href: '/services#services-bento' },
                     { num: '03', name: '1:1 COACHING', price: 'Custom', tag: 'Flexible', href: '/services#services-bento' },
-                    { num: '04', name: 'CONTENT & COPY', price: 'Custom', tag: 'Add-on', href: '/services#services-bento' },
+                    { num: '04', name: 'CONTENT & COPY', price: 'Custom', tag: 'Flexible', href: '/services#services-bento' },
                   ].map((s) => (
                     <Link
                       key={s.num}
@@ -347,10 +347,10 @@ const Home: React.FC = () => {
                   className="mb-8"
                 />
                 <p className="font-serif-elegant italic text-base md:text-lg text-secondary mb-6">
-                  Two best friends who turned a missing room number into a boutique social media consultancy.
+                  Two best friends who turned a missing room number into a social media consultancy.
                 </p>
                 <p className="text-sm md:text-base text-background/60 leading-[1.8]">
-                  Nancy adds media strategy and operational precision across NL and EN. Linda brings bold creative ideas and a global perspective across DE, EN and ES. Together they deliver exactly what big agencies can't: personal, strategic, results-driven social media.
+                  Nancy brings media strategy and operational precision. Linda brings bold creative ideas and a global perspective. Between them, they have worked across the Netherlands, the US, Germany, and Spain, giving them a perspective that's genuinely global. Together they deliver what big agencies can't: personal, strategic, results-driven social media, built for your business.
                 </p>
                 <p className="text-xs text-background/30 mt-6">Co-founders · EN · NL · DE · ES</p>
                 <div className="mt-8">
@@ -385,7 +385,7 @@ const Home: React.FC = () => {
                     {
                       num: '01',
                       title: 'Boutique by design',
-                      body: 'Small client roster on purpose. Every brand gets our full attention — not a junior account manager and a template.',
+                      body: 'Small client roster on purpose. Every brand gets our full attention, not a junior account manager and a template.',
                     },
                     {
                       num: '02',
@@ -395,12 +395,12 @@ const Home: React.FC = () => {
                     {
                       num: '03',
                       title: 'Multilingual reach',
-                      body: 'EN, NL, DE and ES. Your audience speaks different languages — so does your content.',
+                      body: 'EN, NL, DE and ES. Your audience speaks different languages, so does your content.',
                     },
                     {
                       num: '04',
-                      title: 'Radical transparency',
-                      body: 'You always know what we\'re doing and why. Clear reporting, honest check-ins, no black-box agency magic.',
+                      title: 'Honest Transparency',
+                      body: 'We work remotely and flexibly, with clear and honest communication throughout. You always know what we\'re doing and why.',
                     },
                   ].map((c) => (
                     <div key={c.num} className="bg-foreground p-5 md:p-6">
@@ -503,25 +503,25 @@ const Home: React.FC = () => {
             {[
               {
                 client: 'Studio Displays',
-                tag: 'Strategy + Management · NL',
-                headline: 'SOCIAL\nTHAT\nCONVERTS.',
+                tag: 'Strategy + Management · US',
+                headline: 'REACH.\nENGAGE.\nGROW.',
                 stat: '+420% Reach in 90 days',
                 img: sea1,
                 slug: 'studio-displays',
               },
               {
                 client: 'AlbaNova',
-                tag: 'Strategy · ES',
-                headline: 'REACH.\nENGAGE.\nGROW.',
-                stat: '36.78% Engagement Rate',
+                tag: 'Strategy + Content · ES, DE',
+                headline: 'FROM\nIDEA TO\nIDENTITY.',
+                stat: '2 Accounts Launched',
                 img: sea2,
                 slug: 'albanova',
               },
               {
                 client: 'Galería Eldorado',
-                tag: 'Coaching · DE',
+                tag: 'Strategy · ES',
                 headline: 'ESTRATEGIA\nQUE\nFUNCIONA.',
-                stat: '318 Qualified Leads',
+                stat: 'Christmas Campaign',
                 img: sea3,
                 slug: 'galeria-eldorado',
               },
@@ -615,10 +615,10 @@ const Home: React.FC = () => {
             {/* Left — 2/3: the 4 points */}
             <div className="lg:w-2/3 flex flex-col bg-foreground">
               {[
-                "You want social media that actually drives business, not just vanity metrics.",
                 "You're tired of posting without direction and seeing little return.",
                 "You need a clear strategy before investing more time or budget.",
                 "You want experts who understand your goals, not generic templates.",
+                "You're ready to hand off your social media to someone you trust.",
               ].map((item, i) => (
                 <motion.div
                   key={i}

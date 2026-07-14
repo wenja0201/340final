@@ -61,8 +61,8 @@ const VALUES = [
 ];
 
 // ─── FOUNDER BIOS (shared desktop + mobile) ───────────────────────────────────
-const LINDA_BIO = 'Co-founder of 340 Consultancy and the creative spark of the team, Linda brings bold ideas and a global perspective to every project. With experience in content, strategy and social growth across Germany, the Netherlands, the US and Spain, she helps brands tell their stories online. Passionate about storytelling, design and creative strategy, Linda knows how to turn ideas into results — all while fueling up on matcha and planning her next adventure.';
-const NANCY_BIO = 'Co-founder of 340 Consultancy, Nancy is the strategic brain of the team. With a background in content and media strategy and experience in both the Netherlands and the US, she knows how to turn ideas into clear, effective plans. She helps brands focus on what really works, cutting through the noise to reach the right people. Usually powered by tea and always happy to rewatch The Office.';
+const LINDA_BIO = "Linda is the creative mind behind 340. She's the one dreaming up concepts, building the visuals and making sure every brand we work with has a look and feel that actually means something. Having lived and worked across multiple countries, she brings a perspective to creativity that you can't learn in a classroom.";
+const NANCY_BIO = "Nancy is the strategic mind behind 340. She's the one making sure everything runs smoothly: the plans, the clients, the details that keep our business moving. With experience across the Netherlands and the US, she knows how to build strategies that actually make sense, not just on paper but in practice.";
 
 // ─── LANGUAGE CHIP ────────────────────────────────────────────────────────────
 const LangChip: React.FC<{ label: string }> = ({ label }) => (
@@ -149,7 +149,7 @@ const OurStory: React.FC = () => (
               color: C.offWhite,
             }}
           >
-            Built
+            More than
           </span>
           <span
             style={{
@@ -158,7 +158,7 @@ const OurStory: React.FC = () => (
               WebkitTextStroke: `1.5px ${C.burgundy}`,
             }}
           >
-            different.
+            just a number
           </span>
         </h2>
 
@@ -189,7 +189,7 @@ const OurStory: React.FC = () => (
             margin: 0,
           }}
         >
-          340 Consultancy started as an unexpected idea, shaped by best friends turned business partners, Nancy and Linda. Their journey led them to Leeuwarden to pursue their master's degrees, where they lived as neighbors in student housing. Rooms 339 and 341 quickly became a shared creative playground — but one thing was missing: 340.
+          340 Consultancy began in 2025 with two best friends, a shared wall and a big idea. Linda was living in room 339. Nancy was in 341. And somewhere between late night study sessions and endless conversations about brands and social media, they realized something was missing. Room 340.
         </p>
 
         <p
@@ -201,7 +201,7 @@ const OurStory: React.FC = () => (
             margin: 0,
           }}
         >
-          That missing number sparked more than curiosity; it sparked a vision. 340 Consultancy exists where gaps become opportunities, where skills meet, ideas collide, and bold solutions take shape. We help small businesses grow on social media — the honest way.
+          That gap became a name. And that name became a vision.
         </p>
 
         <p
@@ -213,7 +213,19 @@ const OurStory: React.FC = () => (
             margin: 0,
           }}
         >
-          Clear strategies, creative ideas, and a focus on results that actually matter.
+          What started in two tiny student rooms has grown into something we never could have imagined: a social media agency working with clients across 3 continents. Built on bold ideas. Driven by a commitment to showing up for every client like it's our own brand on the line.
+        </p>
+
+        <p
+          style={{
+            fontFamily: FONT.body,
+            fontSize: '0.95rem',
+            lineHeight: 1.85,
+            color: `hsl(36 21% 95% / 0.72)`,
+            margin: 0,
+          }}
+        >
+          Social media that actually works.
         </p>
 
         <p
@@ -226,7 +238,7 @@ const OurStory: React.FC = () => (
             margin: '0.4rem 0 0',
           }}
         >
-          "Turning gaps into bold, effective social growth."
+          Linda &amp; Nancy x
         </p>
       </motion.div>
     </div>
@@ -428,9 +440,9 @@ const FoundersScrollSection: React.FC = () => {
 
   const pages = [
     founderPage(lindaImg, '74% 30%', 'left', 'Linda', 'Müller-Veerse.', C.pink,
-      'Co-Founder / Creative Lead',
+      'Co-Founder / Creative Director',
       LINDA_BIO,
-      ['EN', 'NL', 'DE'], 'center', true),
+      ['DE', 'ES', 'EN', 'NL'], 'center', true),
     {
       type: 'split' as const,
       left: (
@@ -449,9 +461,9 @@ const FoundersScrollSection: React.FC = () => {
       ),
     },
     founderPage(nancyImg, '35% 22%', 'right', 'Nancy', 'Boerjan.', C.pink,
-      'Co-Founder / Organisational Lead',
+      'Co-Founder / Organisational Director',
       NANCY_BIO,
-      ['EN', 'NL', 'ES'], 'center', true),
+      ['EN', 'NL'], 'center', true),
   ];
 
   // ── Mobile: stack the founders + quote vertically (no scroll-hijack, no
@@ -461,7 +473,7 @@ const FoundersScrollSection: React.FC = () => {
       <div style={{ background: C.darkGrey }}>
         <FounderMobile
           img={lindaImg} imgPos="72% 52%" name="Linda" surname="Müller-Veerse."
-          role="Co-Founder / Creative Lead" bio={LINDA_BIO} langs={['EN', 'NL', 'DE']}
+          role="Co-Founder / Creative Director" bio={LINDA_BIO} langs={['DE', 'ES', 'EN', 'NL']}
         />
         <section style={{
           background: C.darkGrey,
@@ -477,7 +489,7 @@ const FoundersScrollSection: React.FC = () => {
         </section>
         <FounderMobile
           img={nancyImg} imgPos="35% 22%" name="Nancy" surname="Boerjan."
-          role="Co-Founder / Organisational Lead" bio={NANCY_BIO} langs={['EN', 'NL', 'ES']}
+          role="Co-Founder / Organisational Director" bio={NANCY_BIO} langs={['EN', 'NL']}
         />
       </div>
     );
@@ -777,7 +789,7 @@ const AboutUs: React.FC = () => {
             marginTop: '1rem',
           }}
         >
-          This agency is hot, fr.
+          Not your average agency.
         </motion.p>
 
         {/* Scroll indicator */}

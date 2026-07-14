@@ -6,7 +6,7 @@ import TopNav from '@/components/TopNav';
 import Footer from '@/components/Footer';
 import YesCTA from '@/components/YesCTA';
 import { servicesDrawerData } from '@/data/servicesDrawerData';
-import { ADD_ONS, ADD_ONS_INTRO, ADD_ONS_OUTRO } from '@/data/addOnsData';
+import { ADD_ONS, ADD_ONS_INTRO, ADD_ONS_OUTRO, STRATEGY_ADD_ONS, STRATEGY_ADD_ONS_INTRO, STRATEGY_ADD_ONS_OUTRO } from '@/data/addOnsData';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 const ROSA = 'hsl(354 100% 87%)';
@@ -26,25 +26,29 @@ const reveal = (delay = 0) => ({
   transition: { duration: 0.6, delay, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] },
 });
 
-/* ── Add-ons block — only rendered on the Management service page ─────────── */
-const AddOnsBlock: React.FC = () => (
+/* ── Add-ons block — rendered on the Strategy and Management service pages ── */
+const AddOnsBlock: React.FC<{
+  categories: typeof ADD_ONS;
+  intro: string;
+  outro: string;
+}> = ({ categories, intro, outro }) => (
   <section style={{ background: 'hsl(0 0% 8%)', padding: 'clamp(3rem,6vw,5.5rem) clamp(1.5rem,5vw,5rem)' }}>
     <div style={{ maxWidth: 1180, margin: '0 auto' }}>
       <div style={{ marginBottom: 'clamp(1.6rem,3vw,2.4rem)' }}>
         <p style={{ fontFamily: FONT.sub, fontWeight: 700, fontSize: '0.45rem', letterSpacing: '0.36em', textTransform: 'uppercase', color: ROSA, marginBottom: '0.9rem' }}>
-          BOLT IT ON
+          PERSONALIZE IT
         </p>
         <h2 style={{ fontFamily: FONT.display, fontWeight: 700, fontSize: 'clamp(2.2rem,5vw,4rem)', lineHeight: 0.9, textTransform: 'uppercase', color: CREAM, margin: 0 }}>
           <span>Add-</span>
           <span style={{ color: 'transparent', WebkitTextStroke: `1.5px ${ROSA}` }}>ons.</span>
         </h2>
         <p style={{ fontFamily: FONT.body, fontSize: 'clamp(0.85rem,1.1vw,1rem)', lineHeight: 1.7, color: 'hsl(36 21% 95% / 0.5)', margin: 'clamp(1rem,2vw,1.4rem) 0 0', maxWidth: '52ch' }}>
-          {ADD_ONS_INTRO}
+          {intro}
         </p>
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(2rem,4vw,3rem)' }}>
-        {ADD_ONS.map((cat) => (
+        {categories.map((cat) => (
           <div key={cat.category}>
             <p style={{ fontFamily: FONT.sub, fontWeight: 700, fontSize: '0.48rem', letterSpacing: '0.3em', textTransform: 'uppercase', color: ROSA, marginBottom: '1rem' }}>
               {cat.category}
@@ -69,7 +73,7 @@ const AddOnsBlock: React.FC = () => (
       </div>
 
       <p style={{ fontFamily: FONT.body, fontSize: 'clamp(0.78rem,1vw,0.9rem)', lineHeight: 1.7, color: 'hsl(36 21% 95% / 0.4)', margin: 'clamp(2rem,4vw,3rem) 0 0' }}>
-        {ADD_ONS_OUTRO}
+        {outro}
       </p>
     </div>
   </section>
@@ -198,7 +202,7 @@ const ServiceDetail: React.FC = () => {
                 className="group"
                 style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '15px 28px', minHeight: 44, fontFamily: FONT.body, fontWeight: 700, fontSize: '0.66rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'hsl(89 71% 15%)', background: ROSA, textDecoration: 'none', borderRadius: 999 }}
               >
-                BOOK A FREE CALL <ArrowUpRight size={13} />
+                {service.ctaLabel ?? 'BOOK A FREE CALL'} <ArrowUpRight size={13} />
               </Link>
             </motion.div>
           </div>
@@ -217,17 +221,23 @@ const ServiceDetail: React.FC = () => {
                   </motion.li>
                 ))}
               </ul>
+              {service.includesNote && (
+                <p style={{ fontFamily: FONT.body, fontSize: '0.8rem', lineHeight: 1.7, color: 'hsl(36 21% 95% / 0.45)', margin: 'clamp(1.2rem,2.5vw,1.8rem) 0 0', maxWidth: '58ch' }}>
+                  {service.includesNote}
+                </p>
+              )}
             </div>
           )}
 
           <p style={{ fontFamily: FONT.body, fontSize: '0.55rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'hsl(36 21% 95% / 0.3)', margin: 'clamp(2rem,4vw,3rem) 0 0' }}>
-            Available in EN · NL · DE · ES
+            Available in {service.facts.find((f) => f.label === 'LANGUAGES')?.value}
           </p>
         </div>
       </section>
 
-      {/* ── ADD-ONS — management only ── */}
-      {service.key === 'management' && <AddOnsBlock />}
+      {/* ── ADD-ONS — strategy & management only ── */}
+      {service.key === 'strategy' && <AddOnsBlock categories={STRATEGY_ADD_ONS} intro={STRATEGY_ADD_ONS_INTRO} outro={STRATEGY_ADD_ONS_OUTRO} />}
+      {service.key === 'management' && <AddOnsBlock categories={ADD_ONS} intro={ADD_ONS_INTRO} outro={ADD_ONS_OUTRO} />}
 
       {/* ── OTHER SERVICES — text links (one image max: no thumbnails) ── */}
       <section style={{ background: INK, padding: 'clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,5rem)', borderTop: 'none' }}>

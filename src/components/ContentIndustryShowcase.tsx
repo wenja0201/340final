@@ -33,14 +33,12 @@ interface Item {
 const U = (id: string) => `https://images.unsplash.com/${id}?w=1100&auto=format&fit=crop&q=70`;
 
 const CONTENT_ITEMS: Item[] = [
-  { label: 'Educational Carousels', img: U('photo-1434030216411-0b793f4b4173') },
-  { label: 'Brand Stories', img: U('photo-1492724724894-7464c27d0ceb') },
+  { label: 'Informational Carousels', img: U('photo-1434030216411-0b793f4b4173') },
   { label: 'Product & Service Launches', img: U('photo-1460925895917-afdab827c52f') },
-  { label: 'Reels & Short-form Video', img: U('photo-1492619375914-88005aa9e8fb') },
-  { label: 'Community Posts', img: U('photo-1529156069898-49953e39b3ac') },
-  { label: 'Thought Leadership', img: U('photo-1507003211169-0a1dd7228f2d') },
-  { label: 'Copywriting & Captions', img: U('photo-1455390582262-044cdead277a') },
-  { label: 'Brand Assets', img: U('photo-1558618666-fcd25c85cd64') },
+  { label: 'Holiday Campaigns', img: U('photo-1482517967863-00e15c9b44be') },
+  { label: 'Presentation Decks', img: U('photo-1507003211169-0a1dd7228f2d') },
+  { label: 'Copywriting', img: U('photo-1455390582262-044cdead277a') },
+  { label: 'Reels & Short-form Videos', img: U('photo-1492619375914-88005aa9e8fb') },
 ];
 
 const INDUSTRY_ITEMS: Item[] = [
@@ -50,8 +48,6 @@ const INDUSTRY_ITEMS: Item[] = [
   { label: 'Life Coaching', img: U('photo-1544367567-0f2fcb009e0b') },
   { label: 'Retail', img: U('photo-1441986300917-64674bd600d8') },
   { label: 'Education', img: U('photo-1513258496099-48168024aec0') },
-  { label: 'Non-profit', img: U('photo-1573496359142-b8d87734a5a2') },
-  { label: 'Start-ups', img: U('photo-1518770660439-4636190af475') },
 ];
 
 // Founder photos shown (and cycled) as the default background before hover.
@@ -277,7 +273,7 @@ const ContentIndustryShowcase: React.FC = () => {
       eyebrow="CONTENT WE CREATE"
       titleLead="Content"
       titleAccent="we create."
-      sub="Each piece serves a purpose. No random posts. No guessing."
+      sub="Each piece serves a purpose, designed to do more than look good."
     />
   );
   const contentModule = <ModuleCell key="content-module" items={CONTENT_ITEMS} defaultImages={DEFAULT_CONTENT} />;

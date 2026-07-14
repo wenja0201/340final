@@ -51,7 +51,7 @@ const pricingFaqs = [
   },
   {
     q: 'What happens if we want to cancel?',
-    a: "For social media management, 30 days written notice is all we need. For one-off services like strategy, there's a 72-hour window after signing if you change your mind.",
+    a: "For social media management, 30 days written notice is all we need. For one-off services like strategy, there's a 24-hour window after signing if you change your mind.",
   },
   {
     q: 'Do you guarantee results?',
@@ -290,8 +290,7 @@ const ContactFAQ: React.FC = () => {
               whiteSpace: 'nowrap',
             }}
           >
-            LET'S{' '}
-            <span style={{ color: 'transparent', WebkitTextStroke: '1.5px hsl(354 100% 87%)' }}>TALK.</span>
+            CONTACT
           </motion.h1>
 
           {/* Tagline */}
@@ -309,7 +308,7 @@ const ContactFAQ: React.FC = () => {
               marginTop: '1.2rem',
             }}
           >
-            This agency is hot, fr.
+            Let's talk.
           </motion.p>
 
           {/* Scroll indicator */}
@@ -439,7 +438,7 @@ const ContactFAQ: React.FC = () => {
                 marginBottom: '0.6rem',
               }}
             >
-              SCHREIB UNS
+              WRITE TO US
             </p>
 
             <SplitHeading
@@ -448,6 +447,19 @@ const ContactFAQ: React.FC = () => {
               size="clamp(1.6rem, 2.8vw, 2.4rem)"
               className="mb-4"
             />
+
+            <p
+              style={{
+                fontFamily: "'Poppins', sans-serif",
+                fontSize: 'clamp(0.8rem, 0.95vw, 0.9rem)',
+                lineHeight: 1.7,
+                color: 'hsl(36 21% 95% / 0.55)',
+                marginBottom: '1.6rem',
+                maxWidth: '46ch',
+              }}
+            >
+              Whether you just have a question or you're ready to get started, either way, drop us a message. We'd love to chat.
+            </p>
 
             <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
               {/* Name + Email row */}
@@ -547,7 +559,7 @@ const ContactFAQ: React.FC = () => {
                     marginBottom: 8,
                   }}
                 >
-                  ICH BIN INTERESSIERT AN
+                  I'M INTERESTED IN
                 </label>
                 <select
                   required
@@ -564,7 +576,7 @@ const ContactFAQ: React.FC = () => {
                   onBlur={e => (e.currentTarget.style.borderBottomColor = 'hsl(36 21% 95% / 0.12)')}
                 >
                   <option value="" style={{ background: 'hsl(0 0% 10%)', color: 'hsl(36 21% 95% / 0.4)' }}>
-                    Wählen…
+                    Select…
                   </option>
                   {services.map(s => (
                     <option key={s} value={s} style={{ background: 'hsl(0 0% 10%)', color: 'hsl(36 21% 95%)' }}>
@@ -652,7 +664,7 @@ const ContactFAQ: React.FC = () => {
                   color: 'hsl(36 21% 95% / 0.38)',
                   letterSpacing: '0.01em',
                 }}>
-                  I'd like to subscribe to the <span style={{ color: 'hsl(36 21% 95% / 0.6)' }}>340 Newsletter</span> — no spam, just real insights and fresh social strategies.
+                  I'd like to subscribe to the <span style={{ color: 'hsl(36 21% 95% / 0.6)' }}>340 Newsletter</span>, no spam, just real insights and industry updates.
                 </span>
               </label>
 

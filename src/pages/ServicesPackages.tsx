@@ -33,7 +33,7 @@ const ServicesPackages: React.FC = () => {
             </span>
           </>,
         ]}
-        tagline="This agency is hot, fr."
+        tagline="Pick your game plan"
         image={servicesHeroImg}
         imagePosition="50% 20%"
         imageOpacity={0.72}
@@ -161,7 +161,7 @@ const ServicesPackages: React.FC = () => {
                       {servicesDrawerData[4].label}
                     </p>
                     <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: '0.6rem', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.12em', marginTop: '0.4rem' }}>
-                      Remote or on-site
+                      Remote
                     </p>
                   </div>
                 </button>
@@ -236,7 +236,7 @@ const ServicesPackages: React.FC = () => {
           <div style={{ height: 1, background: 'hsl(36 21% 95% / 0.07)' }} />
           {[
             { phase: '1', title: 'FREE INTRO CALL', desc: 'We get to know your business, goals and challenges. No commitment, just clarity.' },
-            { phase: '2', title: 'ONBOARDING', desc: 'We walk through our questionnaire together, gather your brand assets, and set the foundation.' },
+            { phase: '2', title: 'ONBOARDING', desc: 'We share an onboarding questionnaire, gather your brand assets, and set the foundation.' },
             { phase: '3', title: 'EXECUTION', desc: 'Strategy goes live. Content is created, published, and managed based on what your audience needs.' },
             { phase: '4', title: 'REVIEW & OPTIMIZE', desc: 'Regular check-ins, performance tracking and transparent reporting. We optimize as we go.' },
           ].map((step, i) => (
